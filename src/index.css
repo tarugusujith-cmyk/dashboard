@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --container-center: true;
+    --container-padding: 2rem;
+    --breakpoint-2xl: 1400px;
+
+    /* Primary Color Scale - Brand Blue #1814F3 */
+    --color-primary-50: #e8e8fe;
+    --color-primary-100: #c4c3fc;
+    --color-primary-200: #a09efa;
+    --color-primary-300: #7c79f8;
+    --color-primary-400: #5854f6;
+    --color-primary-500: #1814f3; /* Main brand color */
+    --color-primary-600: #1612dc;
+    --color-primary-700: #110eac;
+    --color-primary-800: #0d0b86;
+    --color-primary-900: #0a0866;
+
+    /* Secondary Color Scale - Blue #2D60FF */
+    --color-secondary-50: #e9eeff;
+    --color-secondary-100: #c7d5ff;
+    --color-secondary-200: #a5bcff;
+    --color-secondary-300: #83a3ff;
+    --color-secondary-400: #6189ff;
+    --color-secondary-500: #2d60ff; /* Secondary brand color */
+    --color-secondary-600: #2957e6;
+    --color-secondary-700: #2044b4;
+    --color-secondary-800: #18358c;
+    --color-secondary-900: #12296b;
+
+    /* Accent Color Scale - Teal #16DBAA */
+    --color-accent-50: #e7faf4;
+    --color-accent-100: #c3f2e3;
+    --color-accent-200: #9febd2;
+    --color-accent-300: #7be3c1;
+    --color-accent-400: #57dcb0;
+    --color-accent-500: #16dbaa; /* Success/Accent color */
+    --color-accent-600: #14c59a;
+    --color-accent-700: #109a78;
+    --color-accent-800: #0c785d;
+    --color-accent-900: #095c47;
+
+    /* Destructive Color Scale - Red #FF4B4A */
+    --color-destructive-50: #ffeded;
+    --color-destructive-100: #ffcccc;
+    --color-destructive-200: #ffabaa;
+    --color-destructive-300: #ff8a89;
+    --color-destructive-400: #ff6968;
+    --color-destructive-500: #ff4b4a; /* Error color */
+    --color-destructive-600: #e64443;
+    --color-destructive-700: #b43534;
+    --color-destructive-800: #8c2928;
+    --color-destructive-900: #6b201f;
+
+    /* Warning Color Scale - Yellow #FFBB38 */
+    --color-warning-50: #fff8e8;
+    --color-warning-100: #ffedbe;
+    --color-warning-200: #ffe294;
+    --color-warning-300: #ffd76a;
+    --color-warning-400: #ffcc40;
+    --color-warning-500: #ffbb38; /* Warning color */
+    --color-warning-600: #e6a932;
+    --color-warning-700: #b48427;
+    --color-warning-800: #8c671e;
+    --color-warning-900: #6b4f17;
+
+    /* Neutral Gray Scale */
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+
+    /* Foreground Color Scale - Text #343C6A */
+    --color-foreground-50: #ecedf3;
+    --color-foreground-100: #d0d3e0;
+    --color-foreground-200: #b4b9cd;
+    --color-foreground-300: #989fba;
+    --color-foreground-400: #7c85a7;
+    --color-foreground-500: #343c6a; /* Primary text */
+    --color-foreground-600: #2f3660;
+    --color-foreground-700: #252a4b;
+    --color-foreground-800: #1c213a;
+    --color-foreground-900: #15192c;
+
+    /* Muted Foreground Scale - Secondary Text #718EBF */
+    --color-muted-foreground-50: #f0f3f9;
+    --color-muted-foreground-100: #d9e1ef;
+    --color-muted-foreground-200: #c2cfe5;
+    --color-muted-foreground-300: #abbddb;
+    --color-muted-foreground-400: #94abd1;
+    --color-muted-foreground-500: #718ebf; /* Secondary text */
+    --color-muted-foreground-600: #6680ac;
+    --color-muted-foreground-700: #506486;
+    --color-muted-foreground-800: #3e4e68;
+    --color-muted-foreground-900: #2f3c50;
+
+    /* Background Color Scale #F5F7FA */
+    --color-background-50: #ffffff;
+    --color-background-100: #fafbfc;
+    --color-background-200: #f5f7fa; /* Page background */
+    --color-background-300: #e8ecf1;
+    --color-background-400: #dbe1e8;
+    --color-background-500: #ced6df;
+    --color-background-600: #b9c2cd;
+    --color-background-700: #91989f;
+    --color-background-800: #70767c;
+    --color-background-900: #565a5f;
+
+    /* Border Color Scale #E6EFF5 */
+    --color-border-50: #ffffff;
+    --color-border-100: #f8fbfd;
+    --color-border-200: #e6eff5; /* Borders */
+    --color-border-300: #cddde8;
+    --color-border-400: #b4cbdb;
+    --color-border-500: #9bb9ce;
+    --color-border-600: #8ca8ba;
+    --color-border-700: #6d8391;
+    --color-border-800: #556671;
+    --color-border-900: #414e56;
+
+    /* Semantic Color Mappings */
+    --color-primary: var(--color-primary-500);
+    --color-primary-foreground: 255 255 255;
+
+    --color-secondary: var(--color-secondary-500);
+    --color-secondary-foreground: 255 255 255;
+
+    --color-accent: var(--color-accent-500);
+    --color-accent-foreground: 255 255 255;
+
+    --color-destructive: var(--color-destructive-500);
+    --color-destructive-foreground: 255 255 255;
+
+    --color-warning: var(--color-warning-500);
+    --color-warning-foreground: var(--color-foreground-500);
+
+    --color-background: var(--color-background-200);
+    --color-foreground: var(--color-foreground-500);
+
+    --color-card: 255 255 255;
+    --color-card-foreground: var(--color-foreground-500);
+
+    --color-muted: var(--color-background-200);
+    --color-muted-foreground: var(--color-muted-foreground-500);
+
+    --color-border: var(--color-border-200);
+    --color-input: var(--color-background-200);
+    --color-ring: var(--color-secondary-500);
+
+    --color-popover: 255 255 255;
+    --color-popover-foreground: var(--color-foreground-500);
+
+    /* Chart Colors */
+    --color-chart-1: var(--color-primary-500);
+    --color-chart-2: #fc7900; /* Orange */
+    --color-chart-3: var(--color-warning-500);
+    --color-chart-4: #fa00ff; /* Magenta */
+    --color-chart-5: #ff82ac; /* Pink */
+
+    /* Notification Colors */
+    --color-notification: #fe5c73;
+
+    /* Text Colors */
+    --color-text-primary: var(--color-foreground-500);
+    --color-text-secondary: var(--color-muted-foreground-500);
+    --color-text-tertiary: #b1b1b1;
+    --color-text-link: #8ba3cb;
+
+    --radius: 0.5rem;
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--radix-accordion-content-height);
+    }
+}
+
+@keyframes accordion-up {
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+    to {
+        height: 0;
+    }
+}
+
+/* Dark theme overrides. Applied when the <html> element has the "dark" class. */
+.dark {
+    --color-foreground: #e2e8f0; /* slate-200 */
+    --color-muted-foreground: #94a3b8; /* slate-400 */
+
+    --color-background: #0f172a; /* slate-900 */
+    --color-border: #334155; /* slate-700 */
+    --color-input: #1e293b; /* slate-800 */
+
+    --color-card: 30 41 59; /* slate-800 */
+    --color-card-foreground: #e2e8f0;
+
+    --color-muted: #1e293b; /* slate-800 */
+
+    --color-popover: 30 41 59; /* slate-800 */
+    --color-popover-foreground: #e2e8f0;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        color-scheme: light;
+    }
+    html.dark {
+        color-scheme: dark;
+    }
+    body {
+        @apply bg-background text-foreground transition-colors duration-200;
+        font-family:
+            "Inter",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+    }
+    button {
+        @apply cursor-pointer;
+    }
+}
+
+@layer utilities {
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
