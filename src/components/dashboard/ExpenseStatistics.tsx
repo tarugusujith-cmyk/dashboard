@@ -79,18 +79,14 @@ const ExpenseStatistics: React.FC<ExpenseStatisticsProps> = ({ data = [] }) => {
                                 />
                             ))}
                         </Pie>
-                        <Tooltip
-                            formatter={(value: number, name: string) => [
-                                `${value}%`,
-                                name,
-                            ]}
-                            contentStyle={{
-                                backgroundColor: "white",
-                                border: "1px solid var(--color-border-200)",
-                                borderRadius: "8px",
-                                fontSize: "12px",
-                            }}
-                        />
+                       <Tooltip
+    contentStyle={{
+        backgroundColor: "white",
+        border: "1px solid var(--color-border-200)",
+        borderRadius: "8px",
+        fontSize: "12px",
+    }}
+/>
                     </PieChart>
                 </ResponsiveContainer>
             </div>

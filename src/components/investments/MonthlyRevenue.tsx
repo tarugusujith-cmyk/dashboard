@@ -51,7 +51,9 @@ const MonthlyRevenue = ({ data }: MonthlyRevenueProps) => {
                             borderRadius: "8px",
                             fontSize: "12px",
                         }}
-                        formatter={(value) => `$${value.toLocaleString()}`}
+                        formatter={(value) =>
+    `$${typeof value === "number" ? value.toLocaleString() : "0"}`
+}
                     />
                     <Line
                         type="monotone"

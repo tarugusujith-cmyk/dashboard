@@ -2,6 +2,11 @@ import CreditCardsIcons from "./credit-cards.icons";
 import DashboardIcons from "./dashboard.icons";
 import InvestmentsIcons from "./investments.icons";
 
+interface Icon {
+    isActive?: boolean;
+    size?: number;
+}
+
 const Logo = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
